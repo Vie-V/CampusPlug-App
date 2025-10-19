@@ -1,12 +1,23 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 
 export default function HomeScreen() {
   return (
-    <View>
+    <View style={styles.container}>
       <Header />
-      <Text style={{ padding: 20 }}>Welcome to the Home Screen 🎓</Text>
+      <Text style={styles.text}>Welcome to CampusPlug 🎓</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F9F9F9',
+  },
+  text: {
+    padding: 20,
+    fontSize: 18,
+  },
+});
