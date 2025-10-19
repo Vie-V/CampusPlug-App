@@ -1,10 +1,23 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function Header() {
   return (
-    <View style={{ padding: 20, backgroundColor: '#007AFF' }}>
-      <Text style={{ color: 'white', fontSize: 20 }}>CampusPlug Header</Text>
+    <View style={styles.header}>
+      <Text style={styles.title}>CampusPlug</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    backgroundColor: '#007AFF',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+});
